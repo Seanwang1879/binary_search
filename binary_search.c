@@ -14,7 +14,7 @@ void main()
 	array = (int *)malloc(sizeof(int)*MAX_SIZE);
 	
 	printf("please enter array\n");
-	for(i=0; i<MAX_SIZE; i++){
+	for(i=0; i<MAX_SIZE-1; i++){
 		scanf("%d",&array[i]);
 	}
 	
@@ -32,10 +32,10 @@ void main()
 		mid = (min + max)/2;
 	}
 
-	for(i=mid; i<MAX_SIZE; i++){
+	for(i=MAX_SIZE-2; i>mid; i--){
 		array[i+1] = array[i];
 	}
-	array[mid] = temp;
+	array[mid+1] = temp;    //qu jueyu xiaoshu xiangzuo quzheng.
 	
 	for(i=0; i<MAX_SIZE; i++){
 		printf("new array is %d\n",array[i]);
