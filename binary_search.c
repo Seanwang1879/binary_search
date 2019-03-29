@@ -37,5 +37,10 @@ void main()
 	}
 	array[mid] = temp;
 	
+	for(i=0; i<MAX_SIZE; i++){
+		printf("new array is %d\n",array[i]);
+	}
+	
+	free(array);
 	return ;
 }
